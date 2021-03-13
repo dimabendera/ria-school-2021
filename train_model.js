@@ -50,12 +50,6 @@ async function main() {
         kernelSize: 3,
         activation: "relu"
     }));
-    model.add(tf.layers.dense({
-        inputShape: [1],
-        units: 1,
-        activation: "relu",
-        kernelInitializer: "ones"
-    }));
     model.add(tf.layers.maxPool2d({
         poolSize: [2, 2],
         strides: [1, 1]
